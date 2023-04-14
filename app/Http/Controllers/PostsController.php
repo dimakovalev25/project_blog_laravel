@@ -10,10 +10,11 @@ class PostsController extends Controller
     {
         $posts = Post::all();
 
-        foreach ($posts as $item) {
-            dump($item->title);
-            dump($item->content);
-        }
+        return view('posts', compact('posts'));
+//        foreach ($posts as $item) {
+//            dump($item->title);
+//            dump($item->content);
+//        }
 
         //        dump($post->title);
 //        dump($post->content);
@@ -76,6 +77,27 @@ class PostsController extends Controller
         $post = Post::withTrashed()->find(1);
         $post->restore();
         dump('restore post');
+    }
+    public function firstOrCreate()
+    {
+
+        $post = [
+            'title' => 'some post create',
+            'content' => 'some post create content',
+            'likes' => 30,
+        ];
+
+        $post_my =  Post::firstOrCreate([
+            'title' => 'post create3'
+        ],
+        [
+            'title' => 'post create3',
+            'content' => 'some post create content3',
+            'likes' => 30,
+        ]);
+
+
+       dump('end firstorcreate');
     }
 
 
