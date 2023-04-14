@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', 'App\Http\Controllers\PostsController@index');
+Route::get('/posts/create', 'App\Http\Controllers\PostsController@create_post');
 Route::get('/articles', 'App\Http\Controllers\ArticlesController@index');
 
