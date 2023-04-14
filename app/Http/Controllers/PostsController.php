@@ -21,20 +21,19 @@ class PostsController extends Controller
 
 //        $post = Post::where('is_published', 0)->get();
     }
-
     public function create_post()
     {
         $posts_arr = [
             [
-                'title'=>'post create',
-                'content'=>'post create content',
-                'likes'=>90,
+                'title' => 'post create',
+                'content' => 'post create content',
+                'likes' => 90,
 
             ],
             [
-                'title'=>'post create2',
-                'content'=>'post create create',
-                'likes'=>80,
+                'title' => 'post create2',
+                'content' => 'post create create',
+                'likes' => 80,
 
             ],
 
@@ -51,9 +50,35 @@ class PostsController extends Controller
         }
 
 
-
         dump('create');
     }
+    public function update_post()
+    {
+        $post = Post::find(14);
+        dump($post->title);
+
+        $post->update([
+            'title' => 'updated',
+            'content' => 'post updated',
+            'likes' => 0,
+        ]);
+
+    }
+    public function delete_post()
+    {
+        $post = Post::find(1);
+        $post->delete();
+
+        dump('del');
+    }
+    public function restore()
+    {
+        $post = Post::withTrashed()->find(1);
+        $post->restore();
+        dump('restore post');
+    }
+
+
 
 
 }
