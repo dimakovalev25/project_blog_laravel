@@ -9,9 +9,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Post extends Model
 {
     use HasFactory;
+
+    //trait мягкого удаления
     use SoftDeletes;
 
+
+    //фиксируем нашу таблицу
     protected $table = 'posts';
+
+    //прописываем возможность добавления в нашу таблицу
     protected $guarded = [];
 
 

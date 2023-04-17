@@ -8,10 +8,12 @@
     <title>Document</title>
 </head>
 <body>
+<h1>View!!</h1>
+
 @foreach($posts as $post)
     <p>{{$post->title}}</p>
 
 @endforeach
- blade
+
 </body>
 </html>
