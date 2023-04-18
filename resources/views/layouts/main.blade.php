@@ -15,23 +15,24 @@
 </head>
 <body>
 
-<div>
+<div class="container">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="{{route('main.index')}}">Main</a>--}}
+{{--                    </li>--}}
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('main.index')}}">Main</a>
+                        <a class="nav-link" href="{{route('post.index')}}">My posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('contact.index')}}">Contacts</a>
+                        <a class="nav-link" href="{{route('post.create')}}">New post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('post.index')}}">Posts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('about.index')}}">About</a>
+                        <a class="nav-link" href="{{route('about.index')}}">About My</a>
                     </li>
                 </ul>
             </div>

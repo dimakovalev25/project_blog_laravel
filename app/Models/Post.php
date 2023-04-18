@@ -15,7 +15,7 @@ class Post extends Model
 
 
     //фиксируем нашу таблицу
-    protected $table = 'posts';
+    protected $table = 'post';
 
     //прописываем возможность добавления в нашу таблицу
     protected $guarded = [];
