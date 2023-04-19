@@ -16,7 +16,20 @@
             <label for="exampleFormControlTextarea1" class="form-label">Update Content</label>
             <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3">{{$post->content}}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+
+            <label class="mb-2" for="cat">Category</label>
+            <select name="category_id" id="cat" class="form-select" aria-label="Default select example">
+
+                @foreach($categories as $cat)
+                    <option
+                           value="{{$cat->id}}">{{$cat->title}}</option>
+
+                @endforeach
+
+            </select>
+
+
+        <button type="submit" class="btn btn-primary mt-4">Update</button>
         </form>
 
 

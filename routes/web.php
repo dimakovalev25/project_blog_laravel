@@ -3,17 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 
+Route::get('/create', 'App\Http\Controllers\Post\CreateController')->name('post.create');
+Route::delete('/posts/{post}', 'App\Http\Controllers\Post\DeleteController@destroy')->name('post.delete');
+Route::get('/posts/{post}/edit', 'App\Http\Controllers\Post\EditController')->name('post.edit');
+Route::get('/posts', 'App\Http\Controllers\Post\IndexController')->name('post.index');
+Route::get('/posts/{post}', 'App\Http\Controllers\Post\ShowController')->name('post.show');
+Route::post('/posts', 'App\Http\Controllers\Post\StoreController')->name('post.store');
+Route::patch('/posts/{post}', 'App\Http\Controllers\Post\UpdateController')->name('post.update');
 
-Route::get('/posts', 'App\Http\Controllers\PostsController@index')->name('post.index');
-Route::post('/posts', 'App\Http\Controllers\PostsController@store')->name('post.store');
-Route::get('/posts/{post}/edit', 'App\Http\Controllers\PostsController@edit')->name('post.edit');
 
-Route::patch('/posts/{post}', 'App\Http\Controllers\PostsController@update')->name('post.update');
-Route::delete('/posts/{post}', 'App\Http\Controllers\PostsController@destroy')->name('post.delete');
-
-Route::get('/posts/{post}', 'App\Http\Controllers\PostsController@show')->name('post.show');
-Route::get('/create', 'App\Http\Controllers\PostsController@create')->name('post.create');
-
-Route::get('/main', 'App\Http\Controllers\MainController@index')->name('main.index');
-Route::get('/contacts', 'App\Http\Controllers\ContactsController@index')->name('contact.index');
-Route::get('/about', 'App\Http\Controllers\AboutController@index')->name('about.index');
+Route::get('/about', 'App\Http\Controllers\About\AboutController')->name('about.index');
