@@ -6,8 +6,10 @@
         @foreach($posts as $post)
             <ul>
                 <a style='text-decoration: none; color: #1a202c' href="{{route('post.show', $post->id)}}">
-                <li>{{$post->title}}</li>
-                <p>{{$post->content}}</p></a>
+                    <h4>
+                        <li>{{$post->title}}</li>
+                    </h4>
+                    <p>{{$post->content}}</p></a>
             </ul>
 
         @endforeach

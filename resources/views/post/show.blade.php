@@ -2,7 +2,7 @@
 @section('content')
     <div class="container mt-3">
 
-        <p>{{$post->title}}</p>
+        <h3>{{$post->title}}</h3>
         <p>{{$post->content}}</p>
 
         <form action="{{route('post.edit', $post->id)}}">

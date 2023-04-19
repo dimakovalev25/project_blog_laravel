@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 
 class PostsController extends Controller
@@ -19,8 +20,11 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-//        dd($posts);
-        return view('post.index', compact('posts'));
+        $category = Category::find(1);
+
+
+        dd($category->posts);
+//        return view('post.index', compact('posts'));
     }
 
     public function create()
