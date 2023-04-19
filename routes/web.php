@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/create', 'App\Http\Controllers\Post\CreateController')->name('post.create');
-Route::delete('/posts/{post}', 'App\Http\Controllers\Post\DeleteController@destroy')->name('post.delete');
+Route::delete('/posts/{post}', 'App\Http\Controllers\Post\DeleteController')->name('post.delete');
 Route::get('/posts/{post}/edit', 'App\Http\Controllers\Post\EditController')->name('post.edit');
 Route::get('/posts', 'App\Http\Controllers\Post\IndexController')->name('post.index');
 Route::get('/posts/{post}', 'App\Http\Controllers\Post\ShowController')->name('post.show');
