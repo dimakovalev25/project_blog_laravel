@@ -21,9 +21,6 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('search.index')}}">Search</a>
-                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('post.index')}}">My posts</a>
@@ -31,8 +28,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('post.create')}}">New post</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('about.index')}}">About My</a>
+                        <a class="nav-link" href="{{route('search.index')}}">Search</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
                     </li>
                 </ul>
             </div>

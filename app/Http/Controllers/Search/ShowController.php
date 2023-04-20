@@ -15,6 +15,8 @@ class ShowController extends BaseController
     public function __invoke(StoreRequest $request)
     {
 
+
+        //нам приходит 'title' и ищет по нему
         $data = $request->validated();
         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
         $posts = Post::filter($filter)->get();
