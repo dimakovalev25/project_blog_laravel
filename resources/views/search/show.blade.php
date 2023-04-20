@@ -2,7 +2,8 @@
 @section('content')
 
     <div class="container">
-        <h3 class="mb-3 mt-3">My posts</h3>
+        <h3 class="mb-3 mt-3">found posts</h3>
+
         @foreach($posts as $post)
             <ul>
                 <a style='text-decoration: none; color: #1a202c' href="{{route('post.show', $post->id)}}">
@@ -13,8 +14,6 @@
             </ul>
 
         @endforeach
-
-        <div>{{$posts->links()}}</div>
 
     </div>
 
